@@ -1,3 +1,120 @@
-p {
-	background-color: #555;
+body {
+	background-color: #cfad70;
 }
+
+#game {
+	margin: 0 auto;
+	width: 700px;
+	height: 700px;
+	transform: rotateX(45deg) rotateZ(45deg);
+  transform-style: preserve-3d;
+}
+
+div .player {
+	margin-top: -25px;
+	margin-left: -25px;
+}
+
+.player, .player:after, .player:before {
+	background-color: #505;
+	position: absolute;
+	height: 40px;
+  width: 40px;
+  content: '';
+  z-index: 1;
+}
+
+.player:after {
+	background-color: #330033;
+  transform: rotateX(-90deg) translateY(40px);
+  transform-origin: 0px 40px;
+}
+
+.player:before {
+	background-color: #440044;
+  transform: rotateY(90deg) translateX(40px);
+  transform-origin: 40px 0px;
+}
+
+.tile, .tile:after, .tile:before {
+	box-shadow:inset 0px 0px 0px 2px #fff;
+	position: absolute;
+	height: 50px;
+  width: 50px;
+	float: left;
+  content: '';
+}
+
+.tile {
+  position: relative;
+}
+
+.tile:hover {
+	box-shadow:inset 0px 0px 0px 2px #000;
+	cursor: pointer;
+}
+
+.tile:after {
+  transform: rotateX(-90deg) translateY(50px);
+  transform-origin: 100% 100%;
+}
+
+.tile:before {
+  transform: rotateY(90deg) translateX(50px);
+  transform-origin: 100% 100%;
+}
+
+.color-red {
+	background-color: #986057;
+}
+
+.color-red:after {
+	background-color: #794c45;
+}
+
+.color-red:before {
+	background-color: #88564e;
+}
+
+.color-blue {
+	background-color: #1d74b9;
+}
+
+.color-blue:after {
+	background-color: #145181;
+}
+
+.color-blue:before {
+	background-color: #175c94;
+}
+
+.color-grey {
+	background-color: #2f494f;
+}
+
+.color-grey:after {
+	background-color: #203337;
+}
+
+.color-grey:before {
+	background-color: #253a3f;
+}
+
+.color-green {
+	background-color: #299D64;
+}
+
+.color-green:after {
+	background-color: #1c6d46;
+}
+
+.color-green:before {
+	background-color: #207d50;
+}
+
+/*Event lands on a tile*/
+@-webkit-keyframes wave {
+    50% { -webkit-transform: translateZ(10px); }
+}
+
+/*-webkit-animation: wave 1s ease-in-out infinite;*/
