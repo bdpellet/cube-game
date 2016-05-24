@@ -9,6 +9,8 @@ var tileDimension = 50;
 var tiles = createBoard(width, height, tileDimension);
 var players = {};
 
+app.set('port', (process.env.PORT || 8080));
+
 io.on('connection', function(client) {
   console.log('Server: new player connected');
 
@@ -39,7 +41,7 @@ app.get('/*', function(req, res, next) {
   res.sendFile(__dirname + '/client/index.html');
 });
 
-server.listen(8080);
+server.listen(app.get('port'));
 
 function createBoard(width, height, tileDimension) {
 	// Calculate dimensions for our game board
