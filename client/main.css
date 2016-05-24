@@ -1,5 +1,6 @@
 body {
 	background-color: #cfad70;
+	overflow: hidden;
 }
 
 #game {
@@ -16,7 +17,7 @@ div .player {
 }
 
 .player, .player:after, .player:before {
-	background-color: #505;
+	box-shadow:inset 0px 0px 0px 2px #fff;
 	position: absolute;
 	height: 40px;
   width: 40px;
@@ -25,13 +26,11 @@ div .player {
 }
 
 .player:after {
-	background-color: #330033;
   transform: rotateX(-90deg) translateY(40px);
   transform-origin: 0px 40px;
 }
 
 .player:before {
-	background-color: #440044;
   transform: rotateY(90deg) translateX(40px);
   transform-origin: 40px 0px;
 }
@@ -118,3 +117,59 @@ div .player {
 }
 
 /*-webkit-animation: wave 1s ease-in-out infinite;*/
+
+
+
+
+
+
+
+
+
+
+
+/*OPENING LOGIN SCREEN*/
+.login-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1600px;
+	background-color: hsla(39, 50%, 70%, 0.78);
+	/*background: repeating-linear-gradient(
+	  0deg,
+	  #fff,
+	  #fff 10px,
+	  hsla(39, 50%, 70%, 0.78) 10px,
+	  hsla(39, 50%, 70%, 0.78) 50px
+	);*/
+	z-index: 2;
+	margin: 0px;
+}
+
+.login-container div {
+	position: absolute;
+	border-radius: 25px;
+	border: hsla(39, 50%, 70%, 0.78) solid 5px;
+	left: 0;
+	right: 0;
+	top: 250px;
+	margin: auto;
+	width: 300px;
+	height: 100px;
+	background-color: #fff;
+	padding: 10px;
+	z-index: 2;
+}
+
+.login-container div span {
+	
+}
+
+.login-container div input {
+	
+}
+
+.login-container div button {
+	
+}
