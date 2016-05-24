@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost:80');
+var socket = io.connect('http://tranquil-bastion-53705.herokuapp.com:80');
 // var socket = io.connect('http://localhost:' + 8080);
 var board = new Board();
 var player = new Player();
