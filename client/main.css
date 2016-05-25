@@ -16,6 +16,27 @@ div .player {
 	margin-left: -25px;
 }
 
+.player span {
+	top: -50px;
+	width: 60px;
+	height: 25px;
+	position: absolute;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 2px;
+  line-height: 0px;
+  transform: rotateX(0deg) rotateZ(-45deg);
+  transform-origin: 54px 75px;
+}
+
+.player span p {
+	font-family: 'Dosis', sans-serif;
+	font-weight: bold;
+	font-size: 13px;
+	text-align: center;
+	transform: rotateX(0deg) rotateZ(0deg);
+}
+
 .player, .player:after, .player:before {
 	box-shadow:inset 0px 0px 0px 2px #fff;
 	position: absolute;

@@ -12,8 +12,18 @@ Player.prototype.instantiate = function(username, board) {
 }
 
 Player.prototype.spawn = function(location, board) {
+	var nameLen = this.$player.attr('username').length;
+	var name;
+
+	if (nameLen > 7) {
+		name = this.$player.attr('username').substring(0, 7) + '...';
+	} else {
+		name = this.$player.attr('username');
+	}
+
 	var $spawnTile = $(board.$board.children()[location]);
 	this.$player.addClass($spawnTile.attr('class').split(' ')[0]);
+	this.$player.append('<span style="border: 2px dashed #000"><p>' + name + '</p></span>');
 	$spawnTile.append(this.$player);
 	this.updatePlayer($spawnTile);
 	addPlayerToServer(this.$player, $spawnTile);

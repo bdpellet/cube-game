@@ -13,8 +13,20 @@ Enemy.prototype.instantiate = function(username, location, board) {
 }
 
 Enemy.prototype.spawn = function(location, board) {
+	var nameLen = this.$enemy.attr('username').length;
+	var name;
+	
+	if (nameLen > 7) {
+		console.log('in greater than 7')
+		name = this.$enemy.attr('username').substring(0, 7) + '.....';
+	} else {
+		console.log('not in greater than 7')
+		name = this.$enemy.attr('username');
+	}
+
 	var $spawnTile = $(board.$board.children()[location]);
 	this.$enemy.addClass($spawnTile.attr('class').split(' ')[0]);
+	this.$enemy.append('<span style="border: 2px dashed red"><p>' + name + '</p></span>');
 	$spawnTile.append(this.$enemy);
 	console.log(this.$enemy);
 
