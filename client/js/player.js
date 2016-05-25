@@ -7,7 +7,7 @@ function Player() {
 
 Player.prototype.instantiate = function(username, board) {
 	var randomLocation = Math.floor(Math.random() * board.tiles);
-	this.$player.attr('username', username);
+	this.$player.attr('username', username.toUpperCase());
 	this.spawn(randomLocation, board);
 }
 

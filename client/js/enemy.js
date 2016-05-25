@@ -8,7 +8,7 @@ function Enemy() {
 }
 
 Enemy.prototype.instantiate = function(username, location, board) {
-	this.$enemy.attr('username', username);
+	this.$enemy.attr('username', username.toUpperCase());
 	this.spawn(location, board);
 }
 
@@ -26,7 +26,7 @@ Enemy.prototype.spawn = function(location, board) {
 
 	var $spawnTile = $(board.$board.children()[location]);
 	this.$enemy.addClass($spawnTile.attr('class').split(' ')[0]);
-	this.$enemy.append('<span style="border: 2px dashed red"><p>' + name.toUpperCase() + '</p></span>');
+	this.$enemy.append('<span style="border: 2px dashed red"><p>' + name + '</p></span>');
 	$spawnTile.append(this.$enemy);
 	console.log(this.$enemy);
 
