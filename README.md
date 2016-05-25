@@ -1,28 +1,13 @@
-# Project Name #
+# Cube-Game #
  
-## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
-
-## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
-
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
-
-## Problem ##
-  > Describe the problem your product solves.
-
-## Solution ##
-  > Describe how your product elegantly solves the problem.
-
-## Quote from You ##
-  > A quote from a spokesperson in your company.
+  Cube-game is an express/socket.io/jquery multiplayer interactive game. Currently, the only mechanics that exist are creating a player and moving around.
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  Run npm install and then run node with server.js
 
-## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+## User Quotes ##
+  "Cool" - Leo, "Nice bro" - Mike
 
-## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+## Demo ##
+  http://cube-game.herokuapp.com/
